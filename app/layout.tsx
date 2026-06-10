@@ -1,8 +1,22 @@
 import type { Metadata } from "next";
+import { Inter, IBM_Plex_Mono } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
   title: "Ordna TPM Product Brief",
-  description: "Service Operations Platform for Hospitality — TPM Candidate Exercise by Sergio Soto",
+  description:
+    "Service Operations Platform for Hospitality — TPM Candidate Exercise by Sergio Soto",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
 };
 
 export default function RootLayout({
@@ -11,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${ibmPlexMono.variable}`}>
       <body>{children}</body>
     </html>
   );
