@@ -1,0 +1,37 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink:      #0f0f0f;
+  --mid:      #4a4a4a;
+  --muted:    #9a9a9a;
+  --rule:     #e4e4e4;
+  --accent:   #e86c2c;
+  --accent-l: #fdf0e8;
+  --accent-b: #f5b98a;
+  --green:    #16a34a;
+  --amber:    #d97706;
+  --purple:   #7c3aed;
+  --bg:       #fafaf9;
+  --card-bg:  #ffffff;
+  --chip-bg:  #f5f5f4;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-mono), 'Courier New', monospace;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 10.5pt;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media print {
+  body { background: #fff; }
+  @page { margin: 0.3in; }
+}
