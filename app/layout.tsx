@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,10 +13,11 @@ export const metadata: Metadata = {
   title: "Ordna TPM Product Brief",
   description:
     "Service Operations Platform for Hospitality — TPM Candidate Exercise by Sergio Soto",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
